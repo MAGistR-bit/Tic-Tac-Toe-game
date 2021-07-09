@@ -34,9 +34,9 @@ public class TicTacToe extends Application {
     private static final String TITLE = "Крестики-нолики";
 
     /**
-     * Определяем размер игрового поля
+     * Определяем размер игрового поля (по желанию)
      */
-    private final int size = 6;
+    private final int size = 4;
     /**
      * Игровое поле
      */

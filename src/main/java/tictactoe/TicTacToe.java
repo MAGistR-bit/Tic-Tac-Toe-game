@@ -12,6 +12,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 
 
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
@@ -32,9 +34,9 @@ public class TicTacToe extends Application {
     private static final String TITLE = "Крестики-нолики";
 
     /**
-     * Определяем размер игрового поля
+     * Определяем размер игрового поля (по желанию)
      */
-    private final int size = 6;
+    private final int size = 4;
     /**
      * Игровое поле
      */
@@ -58,6 +60,10 @@ public class TicTacToe extends Application {
         alert.setTitle(TITLE);
         // Устанавливаем header
         alert.setHeaderText("РЕЗУЛЬТАТ");
+
+        // Устанавливаем картинку в окно оповещений
+        alert.setGraphic(new ImageView("images/checkmark-game.png"));
+
         // Формируем контекст (сообщение)
         alert.setContentText(message);
         // Отображение диалогового окна
@@ -143,6 +149,9 @@ public class TicTacToe extends Application {
 
         // Устанавливаем заголовок
         stage.setTitle(TITLE);
+
+        // Устанавливаем иконку приложения
+        stage.getIcons().add(new Image("images/gamification.png"));
 
         // Размер окна можно изменять
         stage.setResizable(true);

@@ -64,6 +64,12 @@ public class TicTacToe extends Application {
         // Устанавливаем картинку в окно оповещений
         alert.setGraphic(new ImageView("images/checkmark-game.png"));
 
+        // --- Установка иконки рядом с заголовком --- 
+        // Получаю Stage.
+        Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
+        // Добавляю иконку
+        stage.getIcons().add(new Image("images/gamification.png"));
+
         // Формируем контекст (сообщение)
         alert.setContentText(message);
         // Отображение диалогового окна

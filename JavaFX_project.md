@@ -31,4 +31,20 @@
 *Эти действия необходимы, если вы используете Java 11 и более поздние версии.*
 1. В главном меню выберите пункт <b>Выполнить (Run) | Изменить конфигурации (Edit Configurations...)</b>.
 
+![Конфигурация](src/main/resources/documentation_JavaFX/edit_config.png)
+<p>2. Выберите <b>Приложение (Application) | TicTacToe</b> из списка слева.</p>
+
+![Конфигурация](src/main/resources/documentation_JavaFX/app_tictactoe.png)
+3. В списке <b>Дополнительные параметры (More options)</b> выберите пункт <b>Добавить параметры виртуальной машины (Add VM options)</b>.
+
+4. В <b>Параметры виртуальной машины (VM options)</b>, укажите следующие параметры, но обязательно замените ```/path/to/javafx/sdk``` с помощью пути к каталогу lib загруженного дистрибутива JavaFX SDK (например: <b>/Users/jetbrains/Desktop/javafx-sdk-12/lib</b>): 
+```--module-path /path/to/javafx/sdk --add-modules javafx.controls,javafx.fxml```.
+Если ваш путь содержит пробелы, оберните его в двойные кавычки, например: 
+```"/Пользователи/jetbrains/Рабочий стол/Моя папка/javafx-sdk-12/lib"```.
+
+![Модуль](src/main/resources/documentation_JavaFX/module_path.png)
+5. Примените изменения и закройте диалоговое окно.
+<p>6. Запустите приложение! Всё должно работать! </p>. 
+
+***Подробная документация на сайте JetBrains***: [Ссылка на статью](https://www.jetbrains.com/help/idea/javafx.html).
  

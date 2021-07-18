@@ -18,6 +18,9 @@
 ![Главное окно](src/main/resources/screenshots/main_window.png "Главное окно")
 #### Игровой процесс
 ![Игровой процесс](src/main/resources/screenshots/game_process.png "Игровой процесс")
+***<p>Анимация игрового процесса</p>***
+
+![Игровой процесс](src/main/resources/images/GIF-animation.gif)
 #### Победа "ноликов" (О) в компьютерной игре
 ![Победа ноликов](src/main/resources/screenshots/win_O.png "Победа ноликов")
 #### Победа "крестиков" (X) в компьютерной игре

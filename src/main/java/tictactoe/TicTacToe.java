@@ -22,6 +22,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 
+import java.io.FileInputStream;
 
 
 /**
@@ -140,13 +141,38 @@ public class TicTacToe extends Application {
         control.setPrefHeight(40);
         control.setSpacing(10.0);
         control.setAlignment(Pos.BASELINE_CENTER);
+
+        // Отображаю изображение рядом с кнопкой
+        FileInputStream inputPlay = new FileInputStream("src/main/resources/images/play.png");
+        Image imagePlay = new Image(inputPlay);
+        ImageView imageViewPlay = new ImageView(imagePlay);
+
         // Создаем кнопку
-        Button start = new Button("Начать");
+        Button start = new Button("Начать", imageViewPlay);
         // Отрисовываем сетку при нажатии на кнопку
         start.setOnMouseClicked(
                 event -> border.setCenter(this.buildGrid())
         );
         control.getChildren().addAll(start);
+
+        // Создаю объект класса MP3
+        MP3 thread = new MP3();
+        thread.start();
+
+        // Отображаю изображение рядом с кнопкой
+        FileInputStream input = new FileInputStream("src/main/resources/images/soundOff.png");
+        Image imageOff = new Image(input);
+        ImageView imageViewOff = new ImageView(imageOff);
+
+        // Создаю кнопку, которая будет ВЫКЛЮЧАТЬ аудиозапись
+        Button stop = new Button("Отключить музыку", imageViewOff);
+        control.getChildren().addAll(stop);
+        // Обработка события при нажатии на кнопку "Stop music"
+        stop.setOnMouseClicked(
+                event -> thread.stop()
+        );
+
+
 
         border.setBottom(control);
         // Располагаем сетку из клеток по центру

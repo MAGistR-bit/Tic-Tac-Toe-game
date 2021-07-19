@@ -138,8 +138,8 @@ public class TicTacToe extends Application {
     public void start(Stage stage) throws Exception {
         BorderPane border = new BorderPane();
         HBox control = new HBox();
-        control.setPrefHeight(40);
-        control.setSpacing(10.0);
+        control.setPrefHeight(68);
+        control.setSpacing(15.0);
         control.setAlignment(Pos.BASELINE_CENTER);
 
         // Отображаю изображение рядом с кнопкой
@@ -148,7 +148,7 @@ public class TicTacToe extends Application {
         ImageView imageViewPlay = new ImageView(imagePlay);
 
         // Создаем кнопку
-        Button start = new Button("Начать", imageViewPlay);
+        Button start = new Button("Новая игра", imageViewPlay);
         // Отрисовываем сетку при нажатии на кнопку
         start.setOnMouseClicked(
                 event -> border.setCenter(this.buildGrid())
